@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/gateway/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/gateway/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/gateway",
+  "projects": {
+    "gateway": {
+      "type": "application",
+      "root": "apps/gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/gateway/tsconfig.app.json"
+      }
+    },
+    "restaurent-mservice": {
+      "type": "application",
+      "root": "apps/restaurent-mservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/restaurent-mservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/restaurent-mservice/tsconfig.app.json"
+      }
+    },
+    "user-mservice": {
+      "type": "application",
+      "root": "apps/user-mservice",
+      "entryFile": "main",
+      "sourceRoot": "apps/user-mservice/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user-mservice/tsconfig.app.json"
+      }
+    }
+  }
+}
